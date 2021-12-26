@@ -1,0 +1,30 @@
+{
+  "name": "play-sound-on-keydown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "author": "heppokofrontend",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^12.2.3",
+    "iohook": "^0.9.3"
+  },
+  "iohook": {
+    "targets": [
+      "node-83",
+      "electron-87"
+    ],
+    "platforms": [
+      "win32",
+      "darwin",
+      "linux"
+    ],
+    "arches": [
+      "x64",
+      "ia32"
+    ]
+  }
+}
