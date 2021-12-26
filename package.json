@@ -6,7 +6,9 @@
   "author": "heppokofrontend",
   "license": "MIT",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint --fix ."
   },
   "dependencies": {
     "electron": "^12.2.3",
@@ -26,5 +28,9 @@
       "x64",
       "ia32"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "eslint-config-google": "^0.14.0"
   }
 }
