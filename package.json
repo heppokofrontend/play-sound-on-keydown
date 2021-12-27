@@ -1,18 +1,33 @@
 {
   "name": "play-sound-on-keydown",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "description": "My webpack project",
+  "version": "1.0.0-alpha.0",
   "author": "heppokofrontend",
-  "license": "MIT",
-  "scripts": {
-    "start": "electron .",
-    "eslint": "eslint .",
-    "eslint:fix": "eslint --fix ."
+  "build": {
+    "appId": "dev.heppokofrontend.play-sound-on-keydown",
+    "productName": "play-sound-on-keydown",
+    "files": [
+      "app/**/*",
+      "utils/**/*"
+    ],
+    "mac": {
+      "icon": "./app/img/icon.png"
+    },
+    "win": {
+      "icon": "./app/img/icon.png"
+    }
   },
   "dependencies": {
-    "electron": "^12.2.3",
     "iohook": "^0.9.3"
+  },
+  "devDependencies": {
+    "@webpack-cli/generators": "^2.4.1",
+    "electron": "^12.2.3",
+    "eslint": "^8.5.0",
+    "eslint-config-google": "^0.14.0",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
   },
   "iohook": {
     "targets": [
@@ -29,8 +44,26 @@
       "ia32"
     ]
   },
-  "devDependencies": {
-    "eslint": "^8.5.0",
-    "eslint-config-google": "^0.14.0"
+  "license": "MIT",
+  "main": "app/main.js",
+  "nsis": {
+    "createDesktopShortcut": true
+  },
+  "private": true,
+  "productName": "キー入力に応じて音声ファイルを再生するやつ - Play Sound On Keydown",
+  "scripts": {
+    "build": "npm run build:win",
+    "build:mac": "npx electron-builder --mac --x64",
+    "build:win": "npx electron-builder --win --x64 --dir",
+    "clean": "git clean ./build -x -f",
+    "eslint": "eslint .",
+    "eslint:fix": "eslint --fix .",
+    "prebuild": "npm run wp && npm run clean",
+    "start": "run-p wp:watch start:electron",
+    "start:electron": "electron .",
+    "wp": "webpack --mode=production --node-env=production",
+    "wp:dev": "webpack --mode=development",
+    "wp:prod": "webpack --mode=production --node-env=production",
+    "wp:watch": "webpack --watch"
   }
 }

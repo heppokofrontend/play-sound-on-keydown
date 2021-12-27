@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-eval'"> -->
+    <!-- <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-eval'"> -->
+    <title>キー入力に応じて音声ファイルを再生するやつ - Play Sound On Keydown</title>
+    <link rel="stylesheet" href="./main.css">
+    <script type="module" src="./index.js"></script>
+  </head>
+  <body data-mute="false" data-edit="false" data-transition="enable">
+    <header>
+      <button id="edit"><img src="./img/lock.svg" alt="Edit Mode OFF" data-state="off"></button>
+      <button id="mute"><img src="./img/unmute.svg" alt="Mute OFF"></button>
+      <p id="description" aria-live="polite"></p>
+      <button id="stop" disabled><img src="./img/stop-all.svg" alt="Stop all"></button>
+    </header>
+
+    <main>
+      <nav>
+        <button id="add">
+          <img src="./img/add.svg" alt="Add">
+        </button>
+      </nav>
+
+      <div class="app-header">
+        <div class="app-header__inner">
+          <div class="app-header__col --key">
+            <span class="app-header__label" id="label-keypattern">Key Pattern</span>
+          </div>
+
+          <div class="app-header__col --path">
+            <span class="app-header__label --unedit" id="label-filename">File Name</span>
+            <span class="app-header__label --edit" id="label-filepath">File Path</span>
+          </div>
+
+          <div class="app-header__col --ui">
+            <span class="app-header__label --unedit" id="label-volume">Volume</span>
+            <span class="app-header__label --edit" id="label-controller">Controller</span>
+          </div>
+        </div>
+
+        <div class="app-header__inner">
+          <div class="app-header__col --key">
+            <span class="app-header__label">Key Pattern</span>
+          </div>
+
+          <div class="app-header__col --path">
+            <span class="app-header__label --unedit">File Name</span>
+            <span class="app-header__label --edit">File Path</span>
+          </div>
+
+          <div class="app-header__col --ui">
+            <span class="app-header__label --unedit">Volume</span>
+            <span class="app-header__label --edit">Controller</span>
+          </div>
+        </div>
+
+        <div class="app-header__inner">
+          <div class="app-header__col --key">
+            <span class="app-header__label">Key Pattern</span>
+          </div>
+
+          <div class="app-header__col --path">
+            <span class="app-header__label --unedit">File Name</span>
+            <span class="app-header__label --edit">File Path</span>
+          </div>
+
+          <div class="app-header__col --ui">
+            <span class="app-header__label --unedit">Volume</span>
+            <span class="app-header__label --edit">Controller</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="app">
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        <a href="https://github.com/heppokofrontend/play-sound-on-keydown" target="_blank">GitHub</a> - <small>© heppokofrontend.dev</small>
+      </p>
+    </footer>
+  </body>
+</html>

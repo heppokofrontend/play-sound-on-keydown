@@ -6,6 +6,10 @@ extends:
   - google
 parserOptions:
   ecmaVersion: 13
-rules: {
+rules:
   max-len: off
-}
+  space-before-function-paren:
+    - error
+    - anonymous: always
+      named: never
+      asyncArrow: always

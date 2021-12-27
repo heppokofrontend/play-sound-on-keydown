@@ -1,1 +1,4 @@
 node_modules
+*.csv
+/dist
+/app/index.js
