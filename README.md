@@ -85,7 +85,7 @@ App logo designed by [雨瀬おるこ](https://twitter.com/Amase_Oruko)
 
 Inspired by [効果音プレイヤー SimpleSoundPlayer 2014](https://www.gigafree.net/media/music/SimpleSoundPlayer.html)
 
-## 免責事項
+## ⚠ 免責事項
 
 モックのつもりで作ったものです。もろもろご容赦ください。
 
