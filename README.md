@@ -1,8 +1,8 @@
 # ⌨🎵 キー入力に応じて音声ファイルを再生するやつ
 
-<div style="text-align: center; margin: 30px 0;">
+<p align="center">
   <img src="./docs/main.png" alt>
-</div>
+</p>
 
 任意のアプリケーションを利用中でも、好きなキー入力に応じて  
 あらかじめ用意した音声ファイルが再生できます。
