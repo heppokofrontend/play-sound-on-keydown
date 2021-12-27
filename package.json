@@ -1,6 +1,6 @@
 {
   "name": "play-sound-on-keydown",
-  "description": "My webpack project",
+  "description": "The app that plays an audio file in response to keypress.",
   "version": "1.0.0-alpha.0",
   "author": "heppokofrontend",
   "build": {
